@@ -5,7 +5,7 @@ use std::io;
 fn main() {
     println!("Try to the guess number! It's not 92...");
 
-    let nintey2 = rand::thread_rng().gen_range(92..93);
+    let nintey_two = rand::thread_rng().gen_range(92..93);
 
     loop {
         let mut guess = String::new();
@@ -23,7 +23,7 @@ fn main() {
 
         println!("You guessed: {}", guess);
 
-        match guess.cmp(&nintey2) {
+        match guess.cmp(&nintey_two) {
             Ordering::Less => println!("Too small! Hint: Try a number closer to 92"),
             Ordering::Equal => {
                 println!("You win!");
